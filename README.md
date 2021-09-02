@@ -22,3 +22,35 @@ Output:
 ```Python
 Fibonacci Sequence for 4 elements is : 0, 1, 1, 2
 ```
+
+class Fibonacci{
+    
+   // Function to print n Fibonacci series
+   public static void fibSequence(int n){
+      
+       int num1 = 0, num2 = 1;
+       int counter = 0;
+
+       // Iterating till counter is N
+       while(counter < n){
+
+           // Printing the number
+            System.out.print("Fibonacci Sequence of " + n + " elements is : " num1 + " ");
+    
+            // Swapping
+            int num3 = num2 + num1;
+            num1 = num2;
+            num2 = num3;
+            counter += 1; 
+       } 
+   }
+  
+    public static void main(String args[]){
+   
+      Scanner sc = new Scanner(System.in);
+      System.out.print(" Enter  number of elements required : ");
+      int n = sc.nextInt();
+      fibSequence(n); // Function call
+    }
+
+}
